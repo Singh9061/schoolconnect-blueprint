@@ -1,0 +1,2 @@
+CREATE POLICY "No public access to inquiries" ON public.contact_submissions FOR ALL TO anon, authenticated USING (false) WITH CHECK (false);
+CREATE POLICY "No public access to applications" ON public.admission_applications FOR ALL TO anon, authenticated USING (false) WITH CHECK (false);
