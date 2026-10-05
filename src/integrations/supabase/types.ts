@@ -14,7 +14,78 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      admission_applications: {
+        Row: {
+          address: string
+          created_at: string
+          date_of_birth: string
+          document_paths: Json
+          email: string
+          id: string
+          parent_name: string
+          phone: string
+          section: string
+          status: string
+          student_name: string
+        }
+        Insert: {
+          address: string
+          created_at?: string
+          date_of_birth: string
+          document_paths?: Json
+          email?: string
+          id?: string
+          parent_name: string
+          phone: string
+          section: string
+          status?: string
+          student_name: string
+        }
+        Update: {
+          address?: string
+          created_at?: string
+          date_of_birth?: string
+          document_paths?: Json
+          email?: string
+          id?: string
+          parent_name?: string
+          phone?: string
+          section?: string
+          status?: string
+          student_name?: string
+        }
+        Relationships: []
+      }
+      contact_submissions: {
+        Row: {
+          created_at: string
+          email: string
+          grade: string
+          id: string
+          message: string
+          parent_name: string
+          phone: string
+        }
+        Insert: {
+          created_at?: string
+          email?: string
+          grade?: string
+          id?: string
+          message: string
+          parent_name: string
+          phone?: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          grade?: string
+          id?: string
+          message?: string
+          parent_name?: string
+          phone?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
